@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_13_103605) do
+ActiveRecord::Schema.define(version: 2021_03_14_022932) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,11 +18,12 @@ ActiveRecord::Schema.define(version: 2021_03_13_103605) do
   create_table "addresses", force: :cascade do |t|
     t.bigint "property_id", null: false
     t.string "full_address"
-    t.integer "lga_code"
+    t.bigint "lga_id", null: false
     t.string "state"
     t.integer "postcode"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["lga_id"], name: "index_addresses_on_lga_id"
     t.index ["property_id"], name: "index_addresses_on_property_id"
   end
 
@@ -35,7 +36,7 @@ ActiveRecord::Schema.define(version: 2021_03_13_103605) do
 
   create_table "properties", force: :cascade do |t|
     t.bigint "lga_id", null: false
-    t.integer "council_property_number"
+    t.bigint "council_property_number"
     t.float "longitude"
     t.float "latitude"
     t.datetime "created_at", precision: 6, null: false
@@ -43,6 +44,7 @@ ActiveRecord::Schema.define(version: 2021_03_13_103605) do
     t.index ["lga_id"], name: "index_properties_on_lga_id"
   end
 
+  add_foreign_key "addresses", "lgas"
   add_foreign_key "addresses", "properties"
   add_foreign_key "properties", "lgas"
 end
