@@ -6,7 +6,7 @@ This is a simple API that compiles information about properties in Victoria to d
 Things you may want to cover:
 
 * Ruby version
- ruby 2.6.6
+ = ruby 2.6.6
 
 * System dependencies
 
