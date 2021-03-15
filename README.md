@@ -51,19 +51,19 @@ The tasks in order are:
 - Parses address data from the provided csv file 
   - Finds Lga and property instances by id matching 'lga_code' and 'property_id' to set relationship between models. It then imports it into PostgreSQL
 
-
-
-## Gems used
-- rspec
-- csv
-- jbuilder
-
 ## Test
 ```$ rake spec``` will run the tests set up with Rspec.
 
 Currently, the tests are designed for two things:
 - to alert to any changes to all three models (i.e. if a new validation is introduced to a model) 
 - to check if API view is displaying succesfully and showing the necessary information
+
+## Gems used
+- rspec
+- csv
+- jbuilder
+
+
 
 ## Ruby version 
 ruby 2.6.6
