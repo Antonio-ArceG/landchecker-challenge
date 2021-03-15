@@ -6,6 +6,8 @@ This API was designed as a response to a coding challenge by Landchecker.com
 
 This is a simple API that compiles information about properties in Victoria to display in a simple JSON format. The data used for this API comes from different CSV files containing information about Local Government Areas (lga), the property itself, and the property's address.
 
+This API parses the given CSV files and then imports it to PostgreSQL. For more on how it populates the database [please click here](##populating-database)
+
 ## On Heroku
 
 To see this API's payload you will have to append the ID of the property you'd like to explore to the following link
@@ -43,6 +45,8 @@ To populate PostgrSQL, you can run the rakefile taks by inputting the following 
 $ rake import:database
 ```
 ```import:database``` will then invoke the other rake tasks inside the import.rake file.
+
+### Rake tasks
 
 The tasks in order are:
 - Imports lga data from the provided csv file into PostgreSQL
