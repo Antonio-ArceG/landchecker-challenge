@@ -39,14 +39,14 @@ To run migrations please run
 $ rails db:migrate
 ```
 
-## Populating database
+##Populating database
 To populate PostgrSQL, you can run the rakefile taks by inputting the following in terminal
 ```
 $ rake import:database
 ```
 ```import:database``` will then invoke the other rake tasks inside the import.rake file.
 
-### Rake tasks
+###Rake tasks
 
 The tasks in order are:
 - Imports lga data from the provided csv file into PostgreSQL
