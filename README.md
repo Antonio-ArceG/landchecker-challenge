@@ -21,9 +21,9 @@ $ rake import:database
 ```
 
 ## Gems used
-rspec
-csv
-jbuilder
+- rspec
+- csv
+- jbuilder
 
 ## Test
 ```
