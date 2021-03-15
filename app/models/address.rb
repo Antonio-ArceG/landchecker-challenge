@@ -5,6 +5,9 @@ class Address < ApplicationRecord
   validates_presence_of :lga_id
   validates_presence_of :state
   validates_presence_of :postcode
+  # validates_presence_of :lga
+  # validates_presence_of :property
+
   belongs_to :property
   belongs_to :lga
 end
