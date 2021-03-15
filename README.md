@@ -58,10 +58,17 @@ Currently, the tests are designed for two things:
 - to alert to any changes to all three models (i.e. if a new validation is introduced to a model) 
 - to check if API view is displaying succesfully and showing the necessary information
 
+Tests have been refactored by using Factory_bot, a gem used for setting up Ruby objects as test data with simplified syntax.
+Database_cleaner ensures test databases are cleared after every time. So you can simply run rake spec without setting the tests up before-hand.
+
+
+
 ## Gems used
-- rspec
-- csv
-- jbuilder
+- Csv
+- Jbuilder
+- Rspec
+- Factory_bot
+- Database_cleaner
 
 
 
