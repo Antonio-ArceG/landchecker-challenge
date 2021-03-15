@@ -65,7 +65,9 @@ Currently, the tests are designed for two things:
 Tests have been refactored by using Factory_bot, a gem used for setting up Ruby objects as test data with simplified syntax.
 Database_cleaner ensures test databases are cleared after every time. So you can simply run rake spec without setting the tests up before-hand.
 
+## Things to improve
 
+Implement authorization and Authorization (pundit)
 
 ## Gems used
 - Csv
