@@ -21,7 +21,7 @@ some examples of the property IDs are
 - [173669948](https://landfaker-challenge.herokuapp.com/api/v1/properties/173669948)
 
 ## Before running
-before you run this API on your local, please run bundle install to install the required gems.
+Before you run this API on your local, please run bundle install to install the required gems.
 
 ```
 $ bundle install
@@ -59,9 +59,11 @@ The tasks in order are:
 - jbuilder
 
 ## Test
-```
-$ rake spec:models
-```
+```$ rake spec``` will run the tests set up with Rspec.
+
+Currently, the tests are designed for two things:
+- to alert to any changes to all three models (i.e. if a new validation is introduced to a model) 
+- to check if API view is displaying succesfully and showing the necessary information
 
 ## Ruby version 
 ruby 2.6.6
