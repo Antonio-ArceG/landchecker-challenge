@@ -8,7 +8,7 @@ This is a simple API that compiles information about properties in Victoria to d
 
 to see this API's payload you will have to append the ID of the property you'd like to explore to the following link
 ```
-https://landfaker-challenge.herokuapp.com/api/v1/properties/[PROPERY_ID]
+https://landfaker-challenge.herokuapp.com/api/v1/properties/[PROPERTY_ID]
 ```
 
 some examples of the property IDs are
