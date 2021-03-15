@@ -52,10 +52,6 @@ RSpec.describe Property, type: :model do
     expect(subject).to_not be_valid
   end
 
-  it "is not valid without a council_property_number" do
-   subject.council_property_number = nil
-    expect(subject).to_not be_valid
-  end
 
   it "is not valid without a longitude" do
     subject.longitude = nil

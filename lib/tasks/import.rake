@@ -29,8 +29,8 @@ namespace :import do
   desc "Import addresses"
   task addresses: :environment do
     CSV.foreach "db/support/addresses.csv", headers: true, header_converters: :symbol do |row|
-      property = Property.find(row[1])
       lga = Lga.find(row[3])
+      property = Property.find(row[1])
       Address.create(id: row[0], property: property, full_address: row[2], lga: lga, state: row[4], postcode: row[5])
       puts "created address #{row[2]}"
     end
