@@ -1,24 +1,35 @@
 # PROPERTY API - Landfaker
 
+## About this API
+
 This is a simple API that compiles information about properties in Victoria to display in a simple JSON format. The data used for this API comes from different CSV files containing information about Local Government Areas (lga), the property itself, and the property's address.
 
+## Before running
+```
+$ bundle install
+```
 
-* Ruby version = ruby 2.6.6
+## Database creation
+```
+$ rails db:create
+$ rails db:migrate
+```
 
-* System dependencies
+## Populating database
+```
+$ rake import:database
+```
 
-* Configuration
+## Gems used
+rspec
+csv
+jbuilder
 
-* Database creation
-
-* Database initialization
-
-* Test
-
+## Test
+```
 $ rake spec:models
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Ruby version 
+ruby 2.6.6
 
-* Deployment instructions
-
-* ...
