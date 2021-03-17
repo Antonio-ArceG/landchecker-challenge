@@ -40,7 +40,7 @@ $ rails db:migrate
 ```
 
 ## Populating database
-To populate PostgrSQL, you can run the rakefile taks by inputting the following in terminal
+To populate PostgrSQL, you can run the rakefile tasks by inputting the following in terminal
 ```
 $ rake import:database
 ```
